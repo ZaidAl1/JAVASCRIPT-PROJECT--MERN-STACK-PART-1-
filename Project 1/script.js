@@ -19,6 +19,12 @@ function showSuccess(input){
 
 form.addEventListener('submit', function(e) {
 e.preventDefault();
+
+
+function isValidEmail(email){
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
   
 
 
@@ -30,12 +36,14 @@ e.preventDefault();
     showSuccess(username);
     
 
-    if(email.value === ''){
+    if (email.value === ''){
         showError(email, 'E-mail is required');
-        
-    } else   
-
-    showSuccess(email);
+        } else if (!isValidEmail(email.value)){
+          showError(email, 'Email is invalid');
+        }
+    else{
+          showSuccess(email);
+        }
 
 
     if(password.value === ''){
