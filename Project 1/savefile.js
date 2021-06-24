@@ -17,32 +17,49 @@ function showSuccess(input){
      formControl.className = 'form-control success';
 }
 
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+
+
 function isValidEmail(email){
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
 
-function getFieldId(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
 
-function checkRequired(inputArray) {
-    inputArray.forEach(function(input){
-
-       if(input.value===''){
-           console.log(input.id);
-           showError(input,`${getFieldId(input)} is required`);
-       } else {
-           showSuccess(input);
-       }
-    });
-
-}
+  
 
 
-form.addEventListener('submit', function(e) {
-e.preventDefault();
+    if(username.value === ''){
+        showError(username, 'Username is required');
+        
+    } else   
 
-checkRequired([username,email,password,password2])
+    showSuccess(username);
+    
+
+    if (email.value === ''){
+        showError(email, 'E-mail is required');
+        } else if (!isValidEmail(email.value)){
+          showError(email, 'Email is invalid');
+        }
+    else{
+          showSuccess(email);
+        }
+
+
+    if(password.value === ''){
+        showError(password, 'Password is required');
+        
+    } else   
+
+    showSuccess(password);
+    
+    if(password2.value === ''){
+        showError(password2, 'password is required');
+        
+    } else   
+
+    showSuccess(password2);
     
 });
