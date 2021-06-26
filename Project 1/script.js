@@ -71,9 +71,9 @@ function checkLength(input,min,max){
           }
 }
 
-function checkPasswordMatch(input1,input2){
-    if( input.value !== input2.value ){
-        showError(input2,"Passwowrds don't match");
+function checkPasswordsMatch(input1, input2) {
+    if( input1.value !== input2.value ) {
+        showError(input2,"Passwowrds don't match")
     }
 }
 
@@ -85,5 +85,5 @@ checkRequired([username,email,password,password2])
     checkLength(username,3,10);
     checkLength(password,6,30);
     checkEmail(email);
-    checkPasswordMatch(input1,input2)
+    checkPasswordsMatch(password,password2);
 });
