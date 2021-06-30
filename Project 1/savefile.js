@@ -39,8 +39,7 @@ function isValidEmail(email){
     
 
     if (email.value === ''){
-        showError(email, 'E-mail is required');
-        } else if (!isValidEmail(email.value)){
+        showError(emaib (!isValidEmail(email.value)){
           showError(email, 'Email is invalid');
         }
     else{
@@ -58,8 +57,8 @@ function isValidEmail(email){
     if(password2.value === ''){
         showError(password2, 'password is required');
         
-    } else   
-
-    showSuccess(password2);
+                                                                                                                                                                             } else   
+~
+[po98754wq\ZAS\aa\ASasdfgh.//-    showSuccess(password2);
     
-});
+});  
