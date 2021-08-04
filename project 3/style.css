@@ -7,6 +7,7 @@
 
 body {
      font-family: 'Qahiri', sans-serif;
+     background-color:cornflowerblue;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -16,14 +17,18 @@ body {
 
 }
 
+h1 {
+    color: cornsilk;
+}
 .screen {
     cursor: pointer;
     width: 60%;
     background-color: black;
-
+    border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 }
 
-.controls{
+.controls {
     background-color: darkgray;
     color: white;
     display: flex;
@@ -34,11 +39,9 @@ width: 60%;
 padding: 10px;
 border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
-
 }
 
 .controls .btn {
-
 border: 0;
 background: transparent;
 cursor: pointer;
@@ -49,8 +52,8 @@ color: white;
     color: rgb(0, 53, 53);
 }
 
-.controls .pause{
-    color: wheat;
+.controls .fa-pause{
+    color: rgb(0, 53, 53);
 
 }
 
@@ -64,9 +67,10 @@ color: white;
     color: rgb(71, 8, 8);
     margin-right: 10px;
 }
+
 @media(max-width: 800px)
 {
-    .screen,.controls {
+    .screen, .controls {
         width: 90%;
     }
 }
