@@ -1,27 +1,103 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JAVASCRIPT PROJECTS</title>
 </head>
-<body>
 
-    <h1> My Java Script Projects</h1>
-    <ol class="extend">
+<body>
+    <nav>
+        <div class="logo">
+        
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            
+        </ul>
+        <button class="cta-btn" id="open">Sign Up</button>
+        
+   
+    </nav>
+
+    <header>
+    
+        <button class="toggle" id="toggle" >
+        <i class="fas fa-align-left fa-2x"></i>
+   </button>
+<h1>JavaScript Projects</h1>
+<p>These are my Java Script projects</p>
+
+</header>
+
+<div class="container">
+   
+    <h2>Projects</h2>
+    <ol >
         <li><a href="/Project 1/index.html">HTML Form Validation Sign Up Page</a></li>
         <li><a href="/Project 2/index.html">Seat Selection at Movie Theater </a></li>
         <li><a href="/project 3/index.html">Video Player</a></li>
         <li><a href="/project 4/index.html">Exchange rate calculator</a></li>
         <li><a href="/project 5/index.html">DOM Array Methods</a></li>
-        <li><a href="/project 6/index.html">DOM Array Methods</a></li>
+        <li><a href="/project 6/index.html">Landing Page with Sliding Menu and Modal Window</a></li>
+        <li><a href="/project 7/index.html">Hangman</a></li>
 
  
     </ol>
+   
+   
+
+    <h2>Learn More</h2>
+    <p>By looking at the source code for each of these simple JavaScript projects, you’ll start to understand how you can build a new version of the same idea or build on the original open source code to add your own twists and tweaks.</p>
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+              <button class="close-btn" id="close">
+                  <i class="fa fa-times"></i>
+              </button>
+              <div class="modal-header">
+                  <h3>Sign Up</h3>
+              </div>
+
+              <div class="model-content">
+                  <p>Register for classes</p>
+                     <form class="modal-form">
+                         <div>
+                             <label for="name">Name</label>
+                             <input type="text" id="name" placeholder="Enter Name">
+                         </div>
+                         <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter Email">
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter Password">
+                        </div>
+                        <div>
+                            <label for="password2">Conform Password</label>
+                            <input type="password" id="password2" placeholder="Enter Password">
+                        </div>
+
+                        <input type="submit" value="Submit" class="submit">
+                     </form>
+                </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
