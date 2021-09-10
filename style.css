@@ -107,6 +107,7 @@ padding: 8px 10px;
 
 button:focus{
     outline: none;
+
 }
 
 
@@ -114,7 +115,7 @@ ol li {
     
     border-radius: 15px 50px 30px 5px;
     display: block;
-
+box-shadow: white;
 color: cornsilk;
     padding: 10px 20px ;
     background-color: lightslategray;
@@ -122,9 +123,14 @@ color: cornsilk;
     
 }
 
+ol li:active {
+    transform: scale(0.95);
+}
+
 ol li a{
    cursor: -webkit-grab;
 }
+
 .toggle{
     background-color: rgba(0,0, 0, 0.3);
 position: absolute;
