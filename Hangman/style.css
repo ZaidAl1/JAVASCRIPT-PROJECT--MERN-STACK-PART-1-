@@ -119,13 +119,16 @@ width: 20px;
    padding:15px 20px;
    position: absolute;
    bottom: -70px;
-
+transition: transform 0.5s ease-in-out;
 }
 
 .notification-container p {
     margin: 0;
 }
 
+.notification-container.show{
+transform: translateY(-70);
+}
 
 
 .figure-part {
